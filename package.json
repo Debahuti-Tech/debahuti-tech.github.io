@@ -2,11 +2,14 @@
   "name": "debahuti-tech-v2",
   "version": "2.2.0",
   "private": true,
+  "homepage": "https://debahuti-tech.github.io/debahuti-tech.github.io",
   "scripts": {
-    "dev": "next dev",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out --nojekyll",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.3",
